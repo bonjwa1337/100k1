@@ -1,0 +1,14 @@
+﻿version: "3.9"
+name: bonjwa-game
+services:
+  mongo:
+    container_name: bonjwa-game
+    build: .
+    restart: always
+    ports:
+      - '27020:27017'
+    volumes:
+      - mongo:/data/db
+    env_file: .env
+volumes:
+  mongo:

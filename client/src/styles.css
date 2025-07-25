@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Prosto+One&display=swap');
+
+body {
+  background: #2A397A;
+  background: linear-gradient(180deg, rgba(42, 57, 122, 1) 0%, rgba(119, 138, 224, 1) 53%, rgba(114, 133, 219, 1) 75%);
+  height: 100vh;
+  color: #e7e8ea;
+  font-family: "Prosto One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.title {
+  margin-bottom: 24px;
+}
+
+.main {
+  padding: 24px;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.question {
+  font-size: 2em;
+  margin-bottom: 24px;
+  height: 150px;
+  text-align: left;
+}
+
+.main-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.answer-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.answer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.text {
+  width: 450px;
+  height: 80px;
+  background-color: #2e3d80;
+  border: 3px solid #e7e8ea;
+  font-size: 2.8em;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.points {
+  width: 100px;
+  height: 80px;
+  font-size: 2.8em;
+  background-color: #2e3d80;
+  border: 3px solid #e7e8ea;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.teams-wrapper {
+  display: flex;
+  justify-content: space-between;
+  border: 5px solid #e7e8ea;
+  padding: 4px 8px;
+}
+
+.hidden-text {
+  width: 550px;
+  height: 80px;
+  background-color: #2e3d80;
+  border: 3px solid #e7e8ea;
+  font-size: 2.8em;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.team {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+}
+
+.team-name,
+.team-points {
+  font-size: 2em;
+}
+
+.error-mark {
+  font-size: 5em;
+  color: rgba(255, 0, 0, 0.096);
+}
+
+.red {
+  color: red;
+}
+
+.start-screen-wrapper {
+  display: flex;
+  width: 100%;
+  height: 600px;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+  display: -webkit-inline-flex;
+}
+
+.title-game {
+  display: flex;
+  justify-content: space-between;
+}
+
+.active {
+  color: green;
+  font-weight: bold;
+}
+
+.player-title {
+  cursor: pointer;
+}
+
+.start-screen-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: 24px;
+}
+
+.players-wrapper {
+  display: flex;
+  margin: 8px 24px;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.question-wrapper {
+  display: flex;
+  padding: 8px 16px;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.error-button {
+  width: 30px;
+  height: 30px;
+  margin-top: 16px;
+}
+
+.error-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 16px
+}
+
+.points-add {
+  display: flex;
+  flex-direction: row;
+  gap: 16px
+}
+
+
+.answer {
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.answer.hidden {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.answer.show {
+  animation-name: flip;
+  animation-duration: 2s;
+}
+
+@keyframes flip {
+  0% {
+    transform: rotateX(0deg); /* Начало: без вращения */
+  }
+  100% {
+    transform: rotateX(360deg); /* Конец: полный оборот */
+  }
+}
